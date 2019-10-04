@@ -24,6 +24,12 @@ html{
 .item7{
   grid-area: skillGraph
 }
+.item8{
+  grid-area:otherSkill
+}
+.item9{
+  grid-area:contentSkill
+}
 .desc-skill{
   width: 50%;
   margin:auto;
@@ -38,7 +44,10 @@ html{
       'intro  intro  intro  intro  intro  intro'
       'skillImg skillImg skillImg skillFront skillFront skillFront'
       'skillImg skillImg skillImg skillBack skillBack skillBack'
-      'skillImg skillImg skillImg skillGraph skillGraph skillGraph';
+      'skillImg skillImg skillImg skillGraph skillGraph skillGraph'
+      'otherSkill otherSkill otherSkill otherSkill otherSkill otherSkill'
+      'rb rb rb rb rb rb'
+      'contentSkill contentSkill contentSkill contentSkill contentSkill contentSkill ';
     grid-gap: 10px;
   }
   
@@ -309,7 +318,10 @@ html{
         'skillImg skillImg skillImg skillImg skillImg skillImg'
         'skillFront skillFront skillFront skillFront skillFront skillFront'
         'skillBack skillBack skillBack skillBack skillBack skillBack'
-        'skillGraph skillGraph skillGraph skillGraph skillGraph skillGraph'!important;
+        'skillGraph skillGraph skillGraph skillGraph skillGraph skillGraph'
+        'otherSkill otherSkill otherSkill otherSkill otherSkill otherSkill'
+        'rb rb rb rb rb rb'
+        'contentSkill contentSkill contentSkill contentSkill contentSkill contentSkill'!important;
       grid-gap: 10px;
     }
     .content-grid {
@@ -404,3 +416,95 @@ html{
   .navbar-nav i{
     font-size: 3em;
   }
+  /***** Services ***/
+  label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color:#FFF;
+    border-radius: 3px;
+    text-align: center;
+
+  }
+  label.info{
+    background: #2ecc71;
+    padding:10px;
+  }
+  label.dev{
+    background: #2980b9;
+    padding:10px
+  }
+  label.all{
+    background: #2c3e50;
+    padding:10px
+  }
+  input[type=radio]:checked + label{
+    color:#FFF;
+    font-weight: 600;
+  }
+  .item9{
+    margin: 1em;
+    display: flex;
+    flex-wrap :wrap;
+  }
+ .info-div{
+   margin: 1em;
+   background: #2ecc71;
+   color:#FFF;
+   padding:10px;
+   border-radius: 3px;
+   grid-column: 2;
+   grid-row: 3;
+   display: none;
+ }
+  .dev-div{
+    margin:1em;
+    background: #2980b9;
+    margin-right: 1em;
+    color:#FFF;
+    padding:10px;
+    border-radius: 3px;
+    grid-column: 2;
+    grid-row: 4;
+    display: none;
+
+ }
+ .dev-div > img{
+   width:200px;
+   height:200px;
+ }
+ .info-div > img{
+   width:200px;
+   height:200px;
+ }
+ .txt-desc-skill{
+   display: none;
+   background: rgba(0,0,0,0.2);
+   padding:10px;
+ }
+ .info-div:hover > .txt-desc-skill{
+   display: block;
+   transition: all 3s;
+   transition-timing-function: ease;
+ }
+ .dev-div:hover > .txt-desc-skill{
+  display: block;
+  -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+  transition: width 2s;
+}
+#radio-all:checked ~ .item9 > .mobile,
+#radio-all:checked ~ .item9 > .web {
+  display: block;
+}
+#radio-mobile:checked ~ .item9 > .mobile{
+  display: block;
+  transition: all 3s;
+  animation-timing-function: ease-in;
+}
+#radio-web:checked ~ .item9 > .web{
+  display: block;
+  transition: all 3s;
+}
+.rb{
+  margin-left:4%;
+  margin-right: 5%;
+}
